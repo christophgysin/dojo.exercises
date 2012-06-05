@@ -1,10 +1,9 @@
 package dojo.legacy;
 
-import org.junit.Test;
-import org.junit.Before;
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.fail;
 
+import org.junit.Before;
+import org.junit.Test;
 
 public class FizzBuzzTest {
 
@@ -20,14 +19,12 @@ public class FizzBuzzTest {
     public void testStartIsZero()
     {
         fizzBuzz.play(0, 1);
-        fail();
     }
 
     @Test(expected=IllegalArgumentException.class)
     public void testStopIsSmallerThanStart()
     {
         fizzBuzz.play(1, 0);
-        fail();
     }
 
     @Test
