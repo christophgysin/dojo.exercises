@@ -121,6 +121,82 @@ public class FizzBuzzTest {
     }
 
     @Test
+    public void testFizzBuzzFlipp()
+    {
+        assertArrayEquals(fizzBuzz.play(100, 110),
+                new String[]{
+                    "Buzz",
+                    "101",
+                    "Fizz",
+                    "103",
+                    "104",
+                    "FizzBuzzFlipp",
+                    "106",
+                    "107",
+                    "Fizz",
+                    "109",
+                    "BuzzFlopp"
+                    });
+    }
+
+    @Test
+    public void testFizzBuzzFlopp()
+    {
+        assertArrayEquals(fizzBuzz.play(160, 170),
+                new String[]{
+                    "Buzz",
+                    "Flipp",
+                    "Fizz",
+                    "163",
+                    "164",
+                    "FizzBuzzFlopp",
+                    "166",
+                    "167",
+                    "FizzFlipp",
+                    "169",
+                    "Buzz"
+                    });
+    }
+
+    @Test
+    public void testFizzFlippFlopp()
+    {
+        assertArrayEquals(fizzBuzz.play(226, 236),
+                new String[]{
+                    "226",
+                    "227",
+                    "Fizz",
+                    "229",
+                    "Buzz",
+                    "FizzFlippFlopp",
+                    "232",
+                    "233",
+                    "Fizz",
+                    "Buzz",
+                    "236"
+                    });
+    }
+
+    @Test
+    public void testBuzzFlippFlopp()
+    {
+        assertArrayEquals(fizzBuzz.play(380, 390),
+                new String[]{
+                    "Buzz",
+                    "Fizz",
+                    "382",
+                    "383",
+                    "Fizz",
+                    "BuzzFlippFlopp",
+                    "386",
+                    "Fizz",
+                    "388",
+                    "389",
+                    "FizzBuzz"
+                    });
+    }
+
+    @Test
     public void testFizzBuzzFlippFlopp()
     {
         assertArrayEquals(fizzBuzz.play(1150 , 1160),
