@@ -28,49 +28,51 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void testFirstThree()
+    public void testFirstSeven()
     {
-        assertArrayEquals(fizzBuzz.play(1, 3),
+        assertArrayEquals(fizzBuzz.play(1, 7),
                 new String[]{
                     "1",
                     "2",
-                    "Fizz"
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "Flipp"
                     });
     }
 
     @Test
-    public void testFirstFive()
+    public void testFirstEleven()
     {
-        assertArrayEquals(fizzBuzz.play(1, 5),
+        assertArrayEquals(fizzBuzz.play(1, 11),
                 new String[]{
                     "1",
                     "2",
-                    "Fizz",
+                    "3",
                     "4",
-                    "Buzz"
-                    });
-    }
-
-    @Test
-    public void testFirstFifteen()
-    {
-        assertArrayEquals(fizzBuzz.play(1, 15),
-                new String[]{
-                    "1",
-                    "2",
-                    "Fizz",
-                    "4",
-                    "Buzz",
-                    "Fizz",
-                    "7",
+                    "5",
+                    "6",
+                    "Flipp",
                     "8",
-                    "Fizz",
-                    "Buzz",
-                    "11",
-                    "Fizz",
-                    "13",
-                    "14",
-                    "Fizzbuzz"
+                    "9",
+                    "10",
+                    "Flopp"
+                    });
+    }
+
+    @Test
+    public void testFirstSeventySeven()
+    {
+        assertArrayEquals(fizzBuzz.play(1, 77),
+                new String[]{
+                    "1", "2", "3", "4", "5", "6", "Flipp", "8", "9", "10", "Flopp",
+                    "12", "13", "Flipp", "15", "16", "17", "18", "19", "20", "Flipp", "Flopp",
+                    "23", "24", "25", "26", "27", "Flipp", "29", "30", "31", "32", "Flopp",
+                    "34", "Flipp", "36", "37", "38", "39", "40", "41", "Flipp", "43", "Flopp",
+                    "45", "46", "47", "48", "Flipp", "50", "51", "52", "53", "54", "Flopp",
+                    "Flipp", "57", "58", "59", "60", "61", "62", "Flipp", "64", "65", "Flopp",
+                    "67", "68", "69", "Flipp", "71", "72", "73", "74", "75", "76", "FlippFlopp"
                     });
     }
 }
