@@ -1,4 +1,4 @@
-package dojo.legacy;
+package dojo.legacy.fizzbuzz;
 
 import static org.junit.Assert.assertArrayEquals;
 
