@@ -22,17 +22,35 @@ public class FizzBuzz {
 
         for (int value = start; value <= stop; value++) {
 
-            if (isFlippFlopp(value)) {
-                values.add("FlippFlopp");
-            } else if (isFlipp(value)) {
-                values.add("Flipp");
-            } else if (isFlopp(value)) {
-                values.add("Flopp");
+            String s = "";
+
+            if (!isFizz(value) && !isBuzz(value) && !isFlipp(value) && !isFlopp(value)) {
+                s = Integer.toString(value);
             } else {
-                values.add(Integer.toString(value));
+                if (isFizz(value)) {
+                    s += "Fizz";
+                }
+                if (isBuzz(value)) {
+                    s += "Buzz";
+                }
+                if (isFlipp(value)) {
+                    s += "Flipp";
+                }
+                if (isFlopp(value)) {
+                    s += "Flopp";
+                }
             }
+            values.add(s);
         }
         return values;
+    }
+
+    private boolean isFizz(int value) {
+        return value % 3 == 0;
+    }
+
+    private boolean isBuzz(int value) {
+        return value % 5 == 0;
     }
 
     private boolean isFlipp(int value) {
@@ -41,10 +59,6 @@ public class FizzBuzz {
 
     private boolean isFlopp(int value) {
         return value % 11 == 0;
-    }
-
-    private boolean isFlippFlopp(int value) {
-        return isFlipp(value) && isFlopp(value);
     }
 
     private boolean argumentsValid(int start, int stop) {
